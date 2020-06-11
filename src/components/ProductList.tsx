@@ -1,6 +1,9 @@
 import { Table, Popconfirm, Button, Form, Input, Checkbox } from 'antd';
 
-const layout = {
+
+
+const ProductList = ({ onDelete, products, onAdd }) => {
+  const layout1 = {
   labelCol: {
     span: 8,
   },
@@ -14,8 +17,6 @@ const tailLayout = {
     span: 16,
   },
 };
-
-const ProductList = ({ onDelete, products, onAdd }) => {
   const columns = [
     {
       title: 'Name',
@@ -42,7 +43,7 @@ const onFinishFailed = errorInfo => {
   return (
       <div>
         <Form
-        {...layout}
+        {...layout1}
         name="basic"
         initialValues={{
             remember: true,
